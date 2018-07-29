@@ -22,6 +22,8 @@ class Solution:
                 if is_palindrome(s[i - 1 : j + 1]) and i > 0 and j < len(s)
             ]
             A.append(new_palindromes)
+            if new_palindromes:
+                A[size - 2] = []  # save that memory
 
         return [ps for ps in A if ps][-1][0][2]
 
