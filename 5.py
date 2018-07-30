@@ -1,3 +1,6 @@
+from typing import List, Tuple
+
+
 class Solution:
     def longestPalindromeSlow(self, s):
         # brute force :(
@@ -9,8 +12,8 @@ class Solution:
                     x = p
         return x
 
-    def longestPalindrome(self, s):
-        A = [
+    def longestPalindrome(self, s: str) -> str:
+        A: List[List[Tuple[int, int, str]]] = [
             [(0, 0, "")],
             [(i, i + 1, s[i : i + 1]) for i in range(len(s))],
             [(i, i + 2, s[i : i + 2]) for i in range(len(s) - 1) if s[i] == s[i + 1]],

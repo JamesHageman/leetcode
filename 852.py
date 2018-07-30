@@ -1,5 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def peakIndexInMountainArray(self, A):
+    def peakIndexInMountainArray(self, A: List[int]) -> int:
         start = 0
         end = len(A) - 1
         m = (start + end) // 2
